@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>{block name="htitle"}Internet Programming Conference{/block}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="tpl/css/bootstrap.min.css" rel="stylesheet">
+    <link href="tpl/css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -29,10 +29,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    {block name="hextra"}
+    <!-- Use this block for any additional stuff you want to add to the header -->
+    {/block}
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -44,19 +46,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Internet Programming Conference</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Papers <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">foo</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hotel <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">foo</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -67,21 +72,32 @@
 
     <!-- Page Content -->
     <div class="container">
-
+{block name="content"}
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>A Bootstrap Starter Template</h1>
+                <h1>Internet Programming Conference</h1>
+                <h2>Path configuration</h2>
                 <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
-                <ul class="list-unstyled">
-                    <li>Bootstrap v3.3.1</li>
-                    <li>jQuery v1.11.1</li>
-                </ul>
             </div>
         </div>
         <!-- /.row -->
-
+{/block}
     </div>
     <!-- /.container -->
+
+
+    <footer class="footer">
+      <div class="container">
+{block name="footer"}
+        <p class="text-muted" style="text-align:center;">
+        Generated on {$smarty.now|date_format:"%e %b %Y, %H:%M:%S"}.
+        Using <a href="http://getbootstrap.com/">Bootstrap v3.3.1</a>
+        and <a href="http://api.jquery.com/">jQuery v1.11.1</a>.
+        </p>
+{/block}
+      </div>
+    </footer>
+
 
     <!-- jQuery Version 1.11.1 -->
     <script src="tpl/js/jquery.js"></script>
@@ -90,5 +106,4 @@
     <script src="tpl/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
