@@ -77,11 +77,16 @@ User web directories are served from `~/public_html` and served e.g. from http:/
 
 ```console
 $ [ -d ~/public_html ] && mv -f ~/public_html ~/public_html.old
-$ mkdir - ~/public_html
+$ mkdir ~/public_html
 $ echo '<?php echo("Hello world!"); ?>' > ~/public_html/index.php
 ```
 
-If this isn't displayed, check your Apache error logs.
+If you see the message, you can remove the test `public_html`.
+```console
+$ rm -rf ~/public_html
+```
+
+If the message this isn't displayed, check your Apache error logs for hints on what went wrong.
 
 ### Working setup
 To setup your user working environment, you first need to clone the `intprog-samples` repository.

@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 
-import ConfigParser, os
+import ConfigParser, os, sys
 
 CONF='config.ini'
-CONF_C='hotel/config.h'
-CONF_PHP='web/config.php'
 
 def dump_conf_php(config):
 	lines = []
@@ -40,7 +38,12 @@ def dump_conf_c(config):
 if __name__ == '__main__':
 	config = ConfigParser.ConfigParser()
 	config.read(CONF)
-	with open(CONF_C, 'w') as f:
-		f.write(dump_conf_c(config))
-	with open(CONF_PHP, 'w') as f:
-		f.write(dump_conf_php(config))
+	
+	if len(sys.argv) != 3:
+		sys.exit1()
+	elif sys.argv[1] == 'c':
+		with open(sys.argv[2], 'w') as f:
+			f.write(dump_conf_c(config))
+	elif sys.argv[1] == 'php':
+		with open(sys.argv[2], 'w') as f:
+			f.write(dump_conf_php(config))
