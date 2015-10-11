@@ -12,8 +12,8 @@ $smarty->setConfigDir($topdir.'/smarty/configs');
 include('config.php');
 $smarty->assign('phpbase', $WEB_BASEPHP);
 $smarty->assign('cgibase', $WEB_BASECGI);
-$smarty->assign('hoteladdress', $HOTEL_ADDRESS);
-$smarty->assign('hotelport', $HOTEL_PORT);
+$smarty->assign('hotelgwaddress', $HOTELGW_ADDRESS);
+$smarty->assign('hotelgwport', $HOTELGW_PORT);
 $smarty->assign('paperaddress', $PAPER_ADDRESS);
 $smarty->assign('paperport', $PAPER_PORT);
 
