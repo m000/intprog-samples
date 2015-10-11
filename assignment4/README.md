@@ -86,7 +86,7 @@ If you see the message, you can remove the test `public_html`.
 $ rm -rf ~/public_html
 ```
 
-If the message this isn't displayed, check your Apache error logs for hints on what went wrong.
+If the message isn't displayed, check your Apache error logs for hints on what went wrong.
 
 ### Working setup
 To setup your user working environment, you first need to clone the `intprog-samples` repository.
