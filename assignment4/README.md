@@ -95,4 +95,17 @@ To setup your user working environment, you first need to clone the `intprog-sam
 $ git clone https://github.com/m000/intprog-samples
 ```
 
+Then link the `web` directory to your `public_html`.
 
+```
+$ ln -s intprog-samples/assignment4/web ~/public_html
+```
+
+Finally, run `make` from the assignment directory to generate configuration and setup [Smarty template engine](http://www.smarty.net/).
+
+```
+$ cd intprog-samples/assignment4
+$ make
+```
+
+You are all set!

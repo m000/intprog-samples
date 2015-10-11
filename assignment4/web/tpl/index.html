@@ -74,10 +74,55 @@
     <div class="container">
 {block name="content"}
         <div class="row">
+            <!-- 12 columns content - spans a whole row -->
             <div class="col-lg-12 text-center">
                 <h1>Internet Programming Conference</h1>
-                <h2>Path configuration</h2>
-                <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
+                <p>Welcome stranger!</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- split 12-column rown into two rows -->
+            <div class="col-lg-8">
+                <h2>Information</h2>
+                <p>
+                Use the menu above to navigate the site.
+                Click <a href={$cgibase}/ls.cgi>here</a> to view a list of installed cgi scripts.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h2>System Configuration</h2>
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>phpbase</td>
+                    <td>{$phpbase|default:"N/A"}</td>
+                </tr>
+                <tr>
+                    <td>cgibase</td>
+                    <td>{$cgibase|default:"N/A"}</td>
+                </tr>
+                <tr>
+                    <td>hoteladdress</td>
+                    <td>{$hoteladdress|default:"N/A"}</td>
+                </tr>
+                <tr>
+                    <td>hoteladdress</td>
+                    <td>{$hotelport|default:"N/A"}</td>
+                </tr>
+                <tr>
+                    <td>paperadress</td>
+                    <td>{$paperaddress|default:"N/A"}</td>
+                </tr>
+                <tr>
+                    <td>paperport</td>
+                    <td>{$paperport|default:"N/A"}</td>
+                </tr>
+                </table>
             </div>
         </div>
         <!-- /.row -->
@@ -97,7 +142,6 @@
 {/block}
       </div>
     </footer>
-
 
     <!-- jQuery Version 1.11.1 -->
     <script src="tpl/js/jquery.js"></script>
