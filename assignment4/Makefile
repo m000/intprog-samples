@@ -2,7 +2,7 @@
 
 all: config web/smarty ccgi/libccgi.a
 
-config: web/config.php hotel/config.h hotelgw/config.h
+config: web/config.php paper/config.h
 
 %/config.php: config.ini
 	python confgen.py php $@
