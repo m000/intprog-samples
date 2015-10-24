@@ -50,7 +50,7 @@ In oreder to work from your user directory, you need to enable the `userdir` Apa
 ### Enable PHP for user directories
 PHP is by default disabled for users. You need to edit `/etc/apache2/mods-enabled/php5.conf` in order to enable it. Use a text editor to open the file and comment-out the `<IfModule mod_userdir.c>...</IfModule>` block at the bottom of the file.
 
-### Enable CGI for user directorues.
+### Enable CGI for user directories.
 CGI also has to be enabled for users. Edit file `/etc/apache2/mods-enabled/userdir.conf` and add the following configuration block below the existing `<Directory>...</Directory>` block:
 
 ```apache

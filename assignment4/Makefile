@@ -1,6 +1,10 @@
-.PHONY: all config
+.PHONY: all config zip
 
 all: config web/smarty ccgi/libccgi.a
+
+zip:
+	./mkexcludes.sh > excludes.lst
+	zip -r ../assignment4.zip * --exclude @excludes.lst
 
 config: web/config.php paper/config.h
 
