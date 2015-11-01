@@ -9,10 +9,10 @@ zip:
 config: web/config.php paper/config.h
 
 %/config.php: config.ini
-	python confgen.py php $@
+	python2 confgen.py php $@
 
 %/config.h: config.ini
-	python confgen.py c $@
+	python2 confgen.py c $@
 
 web/smarty:
 	make -C web smarty
